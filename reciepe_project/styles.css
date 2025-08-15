@@ -1,0 +1,189 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container Background */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(120deg, #f8f9fc 0%, #e6ebf2 100%);
+    padding-bottom: 2rem;
+}
+
+/* Navigation */
+.navContainer {
+    background: linear-gradient(160deg, #1a1a1a 0%, #5d72eb 100%);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    width: 100%;
+}
+
+#navList {
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+#navLogo {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffdd57;
+}
+
+#navItems {
+    display: flex;
+    gap: 30px;
+}
+
+/* Footer */
+.footerBox {
+    background: linear-gradient(160deg, #1a1a1a 0%, #5d72eb 100%);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footerBox p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Content Box */
+.contentBox {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 2rem;
+}
+
+/* Dish Card */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-wrap: wrap; /* Makes it mobile-friendly */
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Side Text */
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.leftBox h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.leftBox h3 {
+    margin-top: 10px;
+    color: #5d72eb;
+    font-size: 1.2rem;
+}
+
+.ingBox, .recipeBox, ul, ol {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 20px;
+}
+
+/* Right Side Image */
+.rightBox {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.rightBox img {
+    height: 300px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.rightBox:hover img {
+    transform: scale(1.08);
+}
+
+.rightBox .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rightBox:hover .overlay {
+    opacity: 1;
+}
+
+.rightBox .overlay span {
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(255, 221, 87, 0.9);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightBox img {
+        width: 100%;
+        height: auto;
+    }
+}
